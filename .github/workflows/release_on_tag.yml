@@ -16,9 +16,10 @@ jobs:
     env:
       # ruleid: allowed-unsecure-commands
       ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: log untrusted output
       run: |
@@ -37,7 +38,7 @@ jobs:
             
     - name: Create Release
       id: create_release
-      uses: actions/create-release@v3
+      uses: actions/create-release@v4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
