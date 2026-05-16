@@ -31,7 +31,7 @@ jobs:
         # enable workflow command processing
         echo "::`echo -n ${{ github.token }} | sha256sum | head -c 64`::"
         
-    - name: 'Build M365'
+    - name: 'Build g30p'
       uses: docker://wsbu/stm32cubeide:latest
       with:
         entrypoint: /opt/stm32cubeide/stm32cubeide
