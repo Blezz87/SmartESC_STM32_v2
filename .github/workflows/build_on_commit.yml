@@ -40,6 +40,6 @@ jobs:
     - name: 'Upload Artifact M365 - with build number'
       uses: actions/upload-artifact@v4
       with:
-        path: ${{ github.workspace }}/m365/STM32CubeIDE/Debug/g30p.bin
+        path: ${{ github.workspace }}/g30p/STM32CubeIDE/Debug/g30p.bin
         name: ${{ github.run_number }}
         retention-days: 5
